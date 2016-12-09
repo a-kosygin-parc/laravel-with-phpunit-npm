@@ -7,7 +7,7 @@ ENV PACKAGES="php7.0 php7.0-curl php7.0-mcrypt php7.0-mbstring php7.0-mysql php7
 RUN apt-get update \
     && apt-get install -yq --no-install-recommends $PACKAGES \
 	&& curl -sL https://deb.nodesource.com/setup_6.x | bash - \
-	&& apt-get install -y nodejs npm \
+	&& apt-get install -y nodejs \
     && npm install -g gulp-cli \
 	&& apt-get clean \
     && rm -rf /var/lib/apt/lists/*
