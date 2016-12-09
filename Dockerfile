@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 MAINTAINER Alexandr Kosygin <kosalnik@gmail.com>
 
 # Run some Debian packages installation.
-ENV PACKAGES="php7.0 php7.0-curl php7.0-mcrypt php7.0-mbstring php7.0-mysql php7.0-xml npm git"
+ENV PACKAGES="php7.0 php7.0-curl php7.0-mcrypt php7.0-mbstring php7.0-mysql php7.0-xml php7.0-zip npm git"
 RUN apt-get update && \
     apt-get install -yq --no-install-recommends $PACKAGES && \
     apt-get clean && \
